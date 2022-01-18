@@ -16,4 +16,7 @@ VALUES ('Devimon', '2017/04/12', '5', 'true', '11');
 /* Add Inserts for data into the database for query and update milestone */
 
 INSERT INTO animals (animal_name, date_of_birth, escape_attempts, neutered, weight_per_kg)
-VALUES ('Charmander',  '2020/02', '0', 'false', '11');
+VALUES ('Charmander',  '2020/02/08', '0', 'false', '11');
+
+INSERT INTO animals (animal_name, date_of_birth, escape_attempts, neutered, weight_per_kg)
+VALUES ('Plantmon',  '2022/11/05', '2', 'true', '5.7');
