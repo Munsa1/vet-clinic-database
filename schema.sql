@@ -9,13 +9,6 @@ CREATE TABLE animals (
     weight_per_kg decimal NOT NULL
 );
 
-INSERT INTO animals (animal_name, date_of_birth, escape_attempts, neutered, weight_per_kg)
-VALUES ('Agumon',  '02/02/2020', '0', 'true', '10.23');
 
-INSERT INTO animals (animal_name, date_of_birth, escape_attempts, neutered, weight_per_kg)
-VALUES ('Gabumon', '15/11/2018', '2', 'true', '8');
-
-INSERT INTO animals (animal_name, date_of_birth, escape_attempts, neutered, weight_per_kg)
-VALUES ('Pikachu', '17/01/2021', '1', 'false', '15.04');
 
 
