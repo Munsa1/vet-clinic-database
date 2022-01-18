@@ -1,5 +1,8 @@
 # vet-clinic-database
 
+## Project Description
+Welcome to the Vet-Clinic-Database, an information store for pet animals, which tracks data such as pet-weight, nutered-state, date-of-birth and animal birth. 
+
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
