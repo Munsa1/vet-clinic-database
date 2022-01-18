@@ -31,3 +31,6 @@ INSERT INTO animals (animal_name, date_of_birth, escape_attempts, neutered, weig
 VALUES ('Boarmon',  '2005/06/07', '7', 'true', '20.4');
 
 
+INSERT INTO animals (animal_name, date_of_birth, escape_attempts, neutered, weight_per_kg)
+VALUES ('Blossom',  '1998/10/13', '3', 'true', '17');
+
