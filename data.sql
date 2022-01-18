@@ -26,3 +26,8 @@ VALUES ('Squirtle',  '1993/04/02', '3', 'false', '12.13');
 
 INSERT INTO animals (animal_name, date_of_birth, escape_attempts, neutered, weight_per_kg)
 VALUES ('Angemon',  '2005/06/12', '1', 'true', '45');
+
+INSERT INTO animals (animal_name, date_of_birth, escape_attempts, neutered, weight_per_kg)
+VALUES ('Boarmon',  '2005/06/07', '7', 'true', '20.4');
+
+
