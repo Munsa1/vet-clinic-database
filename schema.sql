@@ -1,4 +1,4 @@
-
+/* Create animals table */
 
 CREATE TABLE animals (
     id integer PRIMARY KEY NOT NULL,

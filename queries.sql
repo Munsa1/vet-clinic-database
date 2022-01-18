@@ -1,4 +1,4 @@
-
+/* Add Queries in-line with the requirements */
 
 SELECT * from animals where animal_name LIKE '%mon';
 
@@ -6,7 +6,7 @@ SELECT animal_name FROM animals WHERE date_of_birth >= '2016/01/01' AND date_of_
 
 SELECT animal_name FROM animals WHERE neutered = 'true' AND escape_attempts <= '3';
 
-SELECT animal_name FROM animals WHERE animal_name IN ('Agumon', 'Pikachu') ;
+SELECT date_of_birth FROM animals WHERE animal_name IN ('Agumon', 'Pikachu') ;
 
 SELECT animal_name, escape_attempts FROM animals WHERE weight_per_kg > 10.5; 
 
