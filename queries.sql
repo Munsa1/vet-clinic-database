@@ -11,3 +11,5 @@ SELECT animal_name FROM animals WHERE animal_name IN ('Agumon', 'Pikachu') ;
 SELECT animal_name, escape_attempts FROM animals WHERE weight_per_kg > 10.5; 
 
 SELECT * FROM animals WHERE neutered = 'true';
+
+SELECT * FROM animals WHERE animal_name != 'Gabumon';
