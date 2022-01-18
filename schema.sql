@@ -1,7 +1,7 @@
 
 
 CREATE TABLE animals (
-    id integer(1),
+    id integer PRIMARY KEY NOT NULL,
     animal_name varchar(100),
     date_of_birth date NOT NULL,
     escape_attempts integer,
@@ -10,4 +10,7 @@ CREATE TABLE animals (
 );
 
 INSERT INTO animals (animal_name, date_of_birth, escape_attempts, neutered, weight_per_kg)
-VALUES (Agumon,  02/02/2020, true, 10.23, 0);
+VALUES ('Agumon',  '02/02/2020', '0', 'true', '10.23');
+
+INSERT INTO animals (animal_name, date_of_birth, escape_attempts, neutered, weight_per_kg)
+VALUES ('Gabumon', '15/11/2018', '2', 'true', '8');
