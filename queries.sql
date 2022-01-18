@@ -13,3 +13,5 @@ SELECT animal_name, escape_attempts FROM animals WHERE weight_per_kg > 10.5;
 SELECT * FROM animals WHERE neutered = 'true';
 
 SELECT * FROM animals WHERE animal_name != 'Gabumon';
+
+SELECT * FROM animals WHERE weight_per_kg >= '10.4' AND weight_per_kg <= '17.3';
