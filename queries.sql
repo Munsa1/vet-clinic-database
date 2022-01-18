@@ -6,4 +6,4 @@ SELECT animal_name FROM animals WHERE date_of_birth >= '2016/01/01' AND date_of_
 
 SELECT animal_name FROM animals WHERE neutered = 'true' AND escape_attempts <= '3';
 
-
+SELECT animal_name FROM animals WHERE animal_name IN ('Agumon', 'Pikachu') ;
