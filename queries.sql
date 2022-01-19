@@ -15,3 +15,23 @@ SELECT * FROM animals WHERE neutered = 'true';
 SELECT * FROM animals WHERE animal_name != 'Gabumon';
 
 SELECT * FROM animals WHERE weight_per_kg >= '10.4' AND weight_per_kg <= '17.3';
+
+
+/* Transaction Update 1 */
+UPDATE animals SET species = 'Unspecified'
+ROLLBACK;
+
+
+/* Transaction Update 2 set species name to 'digimon' */
+UPDATE animals SET species = 'pokemon' WHERE species != 'digimon';
+
+UPDATE animals SET species = 'digimon' WHERE species = NULL;
+COMMIT;
+
+/* Delete all records then rollback */
+BEGIN;
+DELETE * FROM animals;
+ROLLBACK;
+
+
+
