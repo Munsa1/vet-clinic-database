@@ -33,5 +33,12 @@ BEGIN;
 DELETE * FROM animals;
 ROLLBACK;
 
-
+/* Transaction Update 3 update animals weight, create savepoint, change negative values for kg */
+BEGIN;
+DELETE FROM animals WHERE date_of_birth>'2022-01-01';
+SAVEPOINT dateOfBirth;
+UPDATE animals SET weight_per_kg=-1*weight_per_kg;
+ROLLBACK TO dateOfBirth;
+UPDATE animals SET weight_per_kg=-1*weight_per_kg WHERE weight_per_kg<0;
+COMMIT; 
 
