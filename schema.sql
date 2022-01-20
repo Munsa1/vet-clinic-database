@@ -15,9 +15,16 @@ ALTER TABLE animals ADD COLUMN species varchar;
 
 
 /* Create owners table */
-CREATE TABLE animals (
-    id integer PRIMARY KEY NOT NULL,
-    full_name varchar(50),
-    age int NOT NULL
+CREATE TABLE owners (
+ id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+ full_name VARCHAR(50),
+ age INT
 );
+
+/* Create species table */
+CREATE TABLE species (
+ id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+ name VARCHAR(50)
+);
+
 
