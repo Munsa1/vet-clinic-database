@@ -20,18 +20,20 @@ SELECT * FROM animals WHERE weight_per_kg >= '10.4' AND weight_per_kg <= '17.3';
 /* Transaction Update 1 */
 UPDATE animals SET species = 'Unspecified'
 ROLLBACK;
-
+SELECT * FROM animals;
 
 /* Transaction Update 2 set species name to 'digimon' */
-UPDATE animals SET species = 'pokemon' WHERE species != 'digimon';
-
-UPDATE animals SET species = 'digimon' WHERE species = NULL;
+SELECT * FROM animals;
+UPDATE animals SET species='digimon' WHERE name LIKE '%mon';
+UPDATE animals SET species='pokemon' WHERE species IS NULL;
 COMMIT;
+SELECT * FROM animals;
 
 /* Delete all records then rollback */
 BEGIN;
 DELETE * FROM animals;
 ROLLBACK;
+SELECT * FROM animals;
 
 /* Transaction Update 3 update animals weight, create savepoint, change negative values for kg */
 BEGIN;
@@ -40,7 +42,8 @@ SAVEPOINT dateOfBirth;
 UPDATE animals SET weight_per_kg=-1*weight_per_kg;
 ROLLBACK TO dateOfBirth;
 UPDATE animals SET weight_per_kg=-1*weight_per_kg WHERE weight_per_kg<0;
-COMMIT; 
+COMMIT;
+SELECT * FROM animals; 
 
 /* Write final queries for database*/
 
