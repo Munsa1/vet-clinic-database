@@ -1,7 +1,7 @@
 /* Create animals table */
 
 CREATE TABLE animals (
-    id integer PRIMARY KEY NOT NULL,
+    id integer GENERATED ALWAYS ASPRIMARY KEY NOT NULL,
     animal_name varchar(100),
     date_of_birth date NOT NULL,
     escape_attempts integer,
@@ -27,4 +27,11 @@ CREATE TABLE species (
  name VARCHAR(50)
 );
 
+/* Modify primary key */
 
+
+-- Alter Animals Table
+ALTER TABLE animals ADD species_id INT;
+ALTER TABLE animals ADD CONSTRAINT fk_name FOREIGN KEY(species_id) REFERENCES species(id);
+ALTER TABLE animals ADD owner_id INT;
+ALTER TABLE animals ADD CONSTRAINT fk_name2 FOREIGN KEY(owner_id) REFERENCES owners(id);
