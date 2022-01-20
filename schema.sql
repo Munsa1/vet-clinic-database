@@ -14,4 +14,10 @@ CREATE TABLE animals (
 ALTER TABLE animals ADD COLUMN species varchar;
 
 
+/* Create owners table */
+CREATE TABLE animals (
+    id integer PRIMARY KEY NOT NULL,
+    full_name varchar(50),
+    age int NOT NULL
+);
 
