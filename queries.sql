@@ -107,3 +107,15 @@ SELECT COUNT(visits.animals_id) FROM visits JOIN vets ON vets.id = visits.vets_i
 
 /* What specialty should Maisy Smith consider getting? Look for the species she gets the most. */
 SELECT species.name, COUNT(visits.animals_id) as count FROM animals JOIN visits ON animals.id = visits.animals_id JOIN vets ON vets.id = visits.vets_id JOIN species ON species.id = animals.species_id WHERE vets.name = 'Maisy Smith' GROUP BY species.name ORDER BY count DESC LIMIT 1; 
+
+
+-- The following queries are taking too much time (1 sec = 1000ms can be considered as too much time for database query). Try them on your machine to confirm it:
+SELECT COUNT(*) FROM visits where animal_id = 4;
+SELECT * FROM visits where vet_id = 2;
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+
+/* test queries*/
+explain analyze CREATE INDEX visits_animals_id_idx ON visits(id);
+explain analyze CREATE INDEX visits_vets_id_idx ON visits(id);
+explain analyze CREATE INDEX visits_owners_id_idx ON owners(email);
