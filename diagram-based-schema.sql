@@ -44,3 +44,11 @@ CREATE TABLE invoices (
  medical_history_id int,
  CONSTRAINT fk_medical_history FOREIGN KEY(medical_history_id) REFERENCES medical_histories(id)
 );
+
+
+CREATE TABLE medical_histories_treaments_invoices (
+    medical_history_id int,
+    treament_id int,
+    CONSTRAINT fk_medical_history FOREIGN KEY(medical_history_id) REFERENCES medical_histories(id),
+    CONSTRAINT fk_treament FOREIGN KEY(treament_id) REFERENCES treaments(id)
+);
