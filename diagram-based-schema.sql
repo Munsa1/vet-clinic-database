@@ -13,3 +13,11 @@ CREATE TABLE medical_histories(
  admitted_at TIMESTAMP,
  status VARCHAR
 );
+
+
+-- Create treatments table
+CREATE TABLE treatments(
+ id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+ type VARCHAR(50),
+ name DATE
+);
